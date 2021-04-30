@@ -2,12 +2,12 @@ FROM node:14.16.1
 
 WORKDIR /app
 
-COPY package.json /app/package.json
-
 ENV PORT 8000
+
+COPY ./express/package.json /app/package.json
 
 RUN yarn install
 
-COPY . /app
+COPY ./express /app
 
-CMD [ "nodemon", "app.js" ]
+CMD [ "yarn", "start" ]

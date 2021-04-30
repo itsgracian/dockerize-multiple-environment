@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  express:
+    build: 
+        context: .
+        dockerfile: ./express/Dockerfile
+    container_name: express
+    ports:
+      - "8000:8000"

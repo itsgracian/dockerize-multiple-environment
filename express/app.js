@@ -5,7 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 app.get('/', (req, res) => {
-  return res.json({ message: 'welcome' });
+  return res.json({ message: 'welcome to express setup' });
 });
 
 app.post('/', (req, res) => {
